@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    paddind:0;
+    box-sizing :border-box;
+
+}
+body {
+    min-width: 320px;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #fff;
+    overflow-x: hidden;
+}
+img {
+    border: none
+}
+
+a {
+    color: #000;
+    text-decoration: none
+}
+
+li {
+    list-style-type: none
+}
+
+body {
+    max-width: 540px;
+    margin: 0 auto;
+    background: #f2f2f2
+}

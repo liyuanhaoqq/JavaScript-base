@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>携程在手，说走就走</title>
+    <link href="index.css" rel="stylesheet"/>
+    <script>
+        /***简单的代码块***/
+        var a=123,b=321,c;
+        function min(a,b)
+        {
+            return a>b?b:a;
+        }
+        c=min(a,b);
+        document.write(c);
+        document.write("<br/>");
+
+        /*****对象******/
+        var object={
+            name1:"fghj",
+            name2:"xcvbn",
+            name3:function () {
+                return "1234567";
+            }
+        }
+        document.write("<h1>"+object.name1+object.name2+object.name3()+"</h1>");
+        document.write("<br/>");
+
+        /****数组****/
+        var me=[
+            "ghjk",
+            function()
+            {
+                return "fghjkl;";
+            }
+        ]
+        document.write(me[0]+" "+me[1]());
+        document.write("<br/>");
+
+        /****调用和逻辑分隔****/
+        function hello(user)
+        {
+            return "<h1>"+user+"</h1>";
+        }
+        document.write(hello("hello world"));
+        document.write("<br/>");
+        document.write("<br/>");
+
+        document.write("e="+Math.E+"<br/>");//自然对数
+        document.write("ln(2)="+Math.LN2+"<br>");//2的自然对数
+        document.write("ln(10)="+Math.LN10+"<br>");//10的自然对数
+        document.write("log2(e)="+Math.LOG2E+"<br/>");//以2为底e的对数
+        document.write("log10(e)="+Math.LOG10E+"<br/>");//以10为底e的对数
+        document.write("PI="+Math.PI+"<br/>");//PI
+        document.write("sqrt(2)/2="+Math.SQRT1_2+"<br/>");//根号2除2
+        document.write("sqrt(2)="+Math.SQRT2+"<br/>");//根号2
+        document.write("max_value="+Number.MAX_VALUE+"<br/>");//可表示的最大值
+        document.write("min_value="+Number.MIN_VALUE+"<br/>");//可以表示的最小值
+        document.write("nan:"+Number.NAN+"<br/>");//非数字
+        document.write("negative_infinity:"+Number.NEGATIVE_INFINITY+"<br/>");//负无穷大
+        document.write("positive_infinity:"+Number.POSITIVE_INFINITY+"<br/>");//正无穷大
+        document.write("<br/>");
+
+        /****二维数组+逗号运算符****/
+        var a=[];
+        for(var i=0,j=10;i<=10;i++,j--)
+        {
+            a[i, j]=i;
+            document.write("a["+i+","+j+"]="+a[i,j]+"<br/>")
+        }
+        document.write("<br/>");
+
+        /*****prompt的使用*****/
+        var name=prompt('您好，请输入你的姓名',"");
+        alert(name+"欢迎");
+
+        /******输出document的所有属性******/
+        //利用该语句可以遍历对象object的所有属性
+        for(var i in document)
+        {
+            document.write("document."+i+"<br/>");
+        }
+        document.write("<br/>");
+
+        /****异常语句处理****/
+        try{//执行语句
+            //CreateException();
+            alert("执行程序");
+            var err=new Error("异常");
+            throw err;
+        }
+        catch (e) {
+            alert("错误名称"+e.name+"\n错误信息："+e.message);
+        }
+        finally
+        {
+            alert("finally");
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

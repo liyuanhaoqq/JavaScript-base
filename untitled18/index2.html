@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 字符串
+        var str="123.30";
+        var a=parseInt(str);//字符串转换成整型
+        var b=parseFloat(str);//字符串转换成浮点型
+
+        var c=str*1;
+        alert(a+" "+b+" "+typeof(c)+" "+c);
+    </script>
+</head>
+<body>
+    <!--不使用with语句-->
+    <div id="box1"></div>
+    <script>
+        var a=document.getElementById("box1");
+        a.style.borderColor="red";
+        a.style.borderWidth="1px";
+        a.style.borderStyle="solid";
+        a.style.width="400px";
+        a.style.height="200px";
+
+
+
+        /*使用function对象构造函数的语法如下
+            var function_name=new fuction(arg1,arg2, .... ,argN,function_body);
+            -*/
+        var say=new Function("name","say","document.write('<h1>'+name+':'+say+'</h1>');");
+        say("张三","Hi!");
+    </script>
+    <!--使用with语句-->
+    <div id="box2"></div>
+    <script>
+        with(document.getElementById("box2").style)
+        {
+            borderColor="blue";
+            borderWidth="1px";
+            borderStyle="solid";
+            width="400px";
+            height="200px";
+            // backgroundColor="green";
+        }
+    </script>
+
+
+
+
+</body>
+</html>

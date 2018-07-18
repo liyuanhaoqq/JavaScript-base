@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    function add(a, b)
+    {
+        if(add.length!=arguments.length)
+            throw new Error("实参与形参不一致，清重新调用函数");
+        else
+            return a+b;
+    }
+    try{
+        alert(add(1,2));
+    }
+    catch(e)
+    {
+        alert(e.message);
+    }
+
+
+    /****访问对象****/
+    var point={
+        x:{
+            a:1,b:2
+        },
+        y:-1.2
+    }
+    var a=point["x"]["a"];
+    alert(a);
+
+
+    /****数组 **** 定义指定长度的数组****/
+    var a=new Array(6);
+    // alert(a[0]+"GHJK");
+    var b=[1,2,3,4,5,6];
+    document.write(b+"<br/>");
+    b.length=4;
+    document.write(b+"<br/>");
+
+    /**数组**  ****push and pop*/
+    var aa=[];
+    aa.push(1,2,3,4,5);
+    document.write(aa+"<br/>");
+    aa.pop();
+    document.write(aa+"<br/>");
+
+    /***unshift and splice*/
+    aa.unshift(7,8,9);
+    document.write(aa+"<br/>");
+    aa.splice(1,1);
+    document.write(aa+"<br/>");
+    aa.splice(1,2);
+    document.write(aa+"<br/>");
+
+    /***数组中join的使用，将非字符串转换为字符串***/
+   var ab=[1,2,3,4,5,6,7,8],ba=aa;
+    document.write("ab的类型"+typeof(ab)+"<br/>");
+    ab=ab.join("-");
+   document.write(ab+"<br/>");
+   aa=aa.join("-");
+   document.write(aa+"<br/>");
+    document.write("ab的类型"+typeof(ab)+"<br/>");
+
+    /*数组排序*/
+    var q=[1,2,3,4,5,6,7];
+    q.reverse();
+    document.write(q+"<br/>");
+    var w=[2,5,7,6,9,3,4,1];
+    var f=function(x,y){
+        return y-x;
+    }
+    var qw=w.sort(f);
+    document.write(qw+"<br/>");
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
